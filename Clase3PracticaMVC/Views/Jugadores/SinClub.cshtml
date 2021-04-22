@@ -1,0 +1,34 @@
+﻿@model List<Entidades.Jugador>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Jugadores sin club</title>
+</head>
+<body>
+    <h1>Jugadores sin club</h1>
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>
+        @foreach (Entidades.Jugador jug in Model)
+        {
+            <tr>
+                <td>@jug.Nombre</td>
+                <td>@jug.Apellido</td>
+            </tr>
+        }
+
+    </table>
+    
+
+   
+</body>
+</html>
